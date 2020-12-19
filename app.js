@@ -9,10 +9,10 @@ var translateInput = document.getElementById("translate-input");
 var translateOutput = document.getElementById("translate-output");
 
 //mock URL
-var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+//var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
 
 //Yoda Speak API
-//var url = "https://api.funtranslations.com/translate/yoda.json";
+var url = "https://api.funtranslations.com/translate/yoda.json";
 
 translateButton.addEventListener("click", function(){
     var input = translateInput.value;
