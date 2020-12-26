@@ -5,30 +5,36 @@
 }
 
 :root {
-  --primary-color: #60a5fa;
+  --primary-color: #75934e;
   --black: #333333;
+  --button-shadow: #666;
+  --button-hover: #9d9974;
 }
 
 body {
   margin: 0;
   font-family: 'Kalam', cursive;
   color: #333333;
-}
-
-nav {
-  background-color: var(--primary-color);
-  text-align: center;
-}
-
-#nav {
-  font-size: 2rem;
-  padding: 1rem;
+  background-image: url('./yoda2.jpg');
 }
 
 main {
   margin: auto;
   padding: 1rem;
   max-width: 600px;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  margin-top: 100px;
+  background-color: #d5cfb6;
+  height: 75vh;
+  box-shadow: 2px 4px 4px 0px var(--button-shadow);
+  margin-left: 35px;
+}
+
+.translate-heading {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 textarea {
@@ -41,6 +47,11 @@ textarea {
   font-family: inherit;
 }
 
+#button-translate {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
 button {
   background-color: var(--primary-color);
   border: none;
@@ -48,6 +59,24 @@ button {
   padding: 1rem 2rem;
   font-family: 'Kalam', cursive;
   font-size: large;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 2px 4px 4px 0px var(--button-shadow);
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  color: #3c3c20;
+}
+
+button:active {
+  background-color: var(--button-hover);
+  box-shadow: 2px 4px 4px 0px var(--button-shadow);
+  transform: translateY(4px);
+}
+
+#translate-button {
+  border-radius: 10px;
 }
 
 #translate-output {
@@ -59,22 +88,5 @@ button {
   border: 1px solid var(--black);
   padding: 1rem;
   font-size: large;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-
-#footer {
-  font-size: x-large;
-}
-
-footer p {
-  max-width: 600px;
-  margin: auto;
+  background-color: white;
 }
