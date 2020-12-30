@@ -25,24 +25,3 @@ translateButton.addEventListener('click', function () {
 function finalURL(text) {
   return url + '?text=' + text;
 }
-
-document.getElementById('translate-button').addEventListener(
-  'click',
-  (function (clicked) {
-    return function () {
-      if (!clicked) {
-        var last = this.innerHTML;
-        this.innerHTML = 'May the Force be with you!';
-        clicked = true;
-        setTimeout(
-          function () {
-            this.innerHTML = last;
-            clicked = false;
-          }.bind(this),
-          2000
-        );
-      }
-    };
-  })(false),
-  this
-);
